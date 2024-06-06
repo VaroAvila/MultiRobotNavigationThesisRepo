@@ -1,0 +1,1 @@
+the hybrid case did not crash but bumped the other robot. Mention that increasing the footprint area could solve this issue

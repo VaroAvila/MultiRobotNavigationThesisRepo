@@ -1,0 +1,3 @@
+/**:
+  ros__parameters:
+    scan_intervals: [[-2.27, 2.27]] #[rad] these intervals are included to the scan +-85°

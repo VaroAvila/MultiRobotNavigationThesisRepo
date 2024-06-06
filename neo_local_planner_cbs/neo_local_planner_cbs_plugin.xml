@@ -1,0 +1,7 @@
+<library path="neo_local_planner_cbs">
+  <class type="neo_local_planner_cbs::NeoLocalPlannerCBS" base_class_type="nav2_core::Controller">
+    <description>
+      Modified version of the local planner plugin to input a small offset in case that a near robot path is crossing our path
+    </description>
+  </class>
+</library>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<world name="default">
+  <!-- Include the model -->
+  <include>
+    <uri>model://my_L1whitepng_model</uri>
+    <pose>0 0 0 0 0 0</pose>  <!-- Adjust the pose as needed -->
+  </include>
+
+  <!-- Define standard lighting -->
+  <scene>
+    <ambient>0.4 0.4 0.4 1</ambient>
+    <background>0.7 0.7 0.7 1</background>
+    <shadows>true</shadows>
+  </scene>
+
+  <!-- Include basic ground plane -->
+  <include>
+    <uri>model://ground_plane</uri>
+  </include>
+</world>

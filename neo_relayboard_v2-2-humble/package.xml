@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>neo_relayboard_v2-2</name>
+  <version>0.1.2</version>
+  <description>ROS 2 Communication Node for neo_relayboard_v2</description>
+
+  <maintainer email="padmanabhan@neobotix.de">Neobotix</maintainer>
+  <license>BSD</license>
+  <url type="website">http://www.neobotix-robots.com</url>
+  <author>Jan-Niklas Nieland</author>
+  <author>Max Wittal</author>
+  <author>Pradheep Krishna Padmanabhan</author>
+  <maintainer email="padmanabhan@neobotix.de">Max Wittal</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>rclcpp_action</exec_depend>
+  <exec_depend>rclcpp_lifecycle</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>trajectory_msgs</exec_depend>
+  <exec_depend>builtin_interfaces</exec_depend>
+  <exec_depend>neo_srvs2</exec_depend>
+  <exec_depend>neo_msgs2</exec_depend>
+  <exec_depend>neo_common2</exec_depend>
+  <exec_depend>std_srvs</exec_depend>
+
+  <export>
+   <build_type>ament_cmake</build_type>
+  </export>
+
+</package>

@@ -1,0 +1,5 @@
+<library path="nav2_footprint_costmap_plugin_core">
+  <class name="nav2_footprint_costmap_plugin/FootprintLayer" type="nav2_footprint_costmap_plugin::FootprintLayer" base_class_type="nav2_costmap_2d::Layer">
+    <description>Layer that publishes the footprint of a robot with a cost in the global map</description>
+  </class>
+</library>

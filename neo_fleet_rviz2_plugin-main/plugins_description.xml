@@ -1,0 +1,9 @@
+<library path="neo_fleet_rviz2_plugin">
+  <class name="neo_fleet/NeoFleetRViz2Plugin"
+      type="neo_fleet::NeoFleetRViz2Plugin"
+      base_class_type="rviz_common::Panel">
+    <description>
+      A panel widget
+    </description>
+  </class>
+</library>

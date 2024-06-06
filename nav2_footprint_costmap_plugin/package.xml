@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>nav2_footprint_costmap_plugin</name>
+  <version>1.0.0</version>
+  <description>Run-time plugin for Costmap2D footprint layer</description>
+  <maintainer email="alvaro.avila.97@gmail.com">Alvaro Avila</maintainer>
+  <license>BSD-3-Clause</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <depend>nav2_costmap_2d</depend>
+  <depend>pluginlib</depend>
+  <depend>rclcpp</depend>
+  <depend>nav_msgs</depend>
+  <depend>geometry_msgs</depend>
+
+  <export>
+    <costmap_2d plugin="${prefix}/footprint_layer.xml" />
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
