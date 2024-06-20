@@ -64,12 +64,12 @@ def execution_stage(context: LaunchContext, namespace_val):
             'frame_prefix': namespace_frame_prefix}],
         arguments=[urdf])
 
-    teleop = Node(
-        package='teleop_twist_keyboard',executable="teleop_twist_keyboard",
-        output='screen',
-        prefix='xterm -e',
-        namespace=namespace_robot,
-        name='teleop')
+    # teleop = Node(
+    #     package='teleop_twist_keyboard',executable="teleop_twist_keyboard",
+    #     output='screen',
+    #     prefix='xterm -e',
+    #     namespace=namespace_robot,
+    #     name='teleop')
 
     relay_topic = Node(
         package='topic_tools',
@@ -91,7 +91,7 @@ def execution_stage(context: LaunchContext, namespace_val):
             'output_topic': "/tf_static",
             'monitor_rate': 100.0}])
 
-    return [spawn_entity, start_robot_state_publisher_cmd, teleop, relay_topic, relay_topics_tf_static]
+    return [spawn_entity, start_robot_state_publisher_cmd, relay_topic, relay_topics_tf_static]
 
 def generate_launch_description():
     yaw_arg = DeclareLaunchArgument('yaw', default_value='0.0')  # Yaw angle in radians

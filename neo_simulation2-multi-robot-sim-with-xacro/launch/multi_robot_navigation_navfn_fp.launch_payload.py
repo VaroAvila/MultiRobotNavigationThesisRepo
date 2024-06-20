@@ -47,7 +47,7 @@ def generate_launch_description():
                 'params_file': os.path.join(
             get_package_share_directory('neo_simulation2'),
             'configs/'+MY_NEO_ROBOT,
-            'navigation_navfn_'+ str(i) + '_fp''.yaml')}.items(),
+            'navigation_navfn_'+ str(i) + '_fp_payload''.yaml')}.items(),
         ))
     
     ld.add_action(IncludeLaunchDescription(

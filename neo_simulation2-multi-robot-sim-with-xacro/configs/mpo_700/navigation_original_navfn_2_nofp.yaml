@@ -241,7 +241,7 @@ local_costmap:
       publish_frequency: 1.0
       global_frame: robot2/odom
       robot_base_frame: robot2/base_link
-      footprint_padding: 0.
+      footprint_padding: 0.1
       footprint:  "[ [0.45,0.4],[-0.45,0.4],[-0.45,-0.4],[0.45,-0.4] ]"
       use_sim_time: True
       rolling_window: true
@@ -282,7 +282,7 @@ global_costmap:
       global_frame: map
       robot_base_frame: robot2/base_link
       map_topic: /map
-      footprint_padding: 0.
+      footprint_padding: 0.1
       footprint:  "[ [0.45,0.4],[-0.45,0.4],[-0.45,-0.4],[0.45,-0.4] ]"
       use_sim_time: True
       # robot_radius: 0.22

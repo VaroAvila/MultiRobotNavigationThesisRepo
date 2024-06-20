@@ -1,18 +1,9 @@
-# Neobotix GmbH
-
 import launch
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, ExecuteProcess
+from launch.actions import IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import ThisLaunchFileDir, LaunchConfiguration
-from launch_ros.actions import Node
-from launch.launch_context import LaunchContext
-from launch.utilities import perform_substitutions
 import os
-from pathlib import Path
-import xml.etree.ElementTree as ET
-import xacro
 import time
 
 MY_NO_ROBOTS = "3"
@@ -40,43 +31,52 @@ def generate_launch_description():
         )
     ld.add_action(gazebo)
 
-    ld.add_action(IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(get_package_share_directory('neo_simulation2'), 'launch', 'simulation_seats_robot.launch.py')
-        ),
-        launch_arguments={
-            'use_multi_robots': 'True',
-            'x': str(3.7),
-            'y': str(0.3),
-            'yaw': str(3.14),
-            'namespace_robot': "robot0"
-        }.items(),
+    ld.add_action(TimerAction(
+        period=3.0,
+        actions=[IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(
+                os.path.join(get_package_share_directory('neo_simulation2'), 'launch', 'simulation_seats_robot.launch.py')
+            ),
+            launch_arguments={
+                'use_multi_robots': 'True',
+                'x': str(3.7),
+                'y': str(0.3),
+                'yaw': str(3.14),
+                'namespace_robot': "robot0"
+            }.items(),
+        )]
     ))
 
-    ld.add_action(IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(get_package_share_directory('neo_simulation2'), 'launch', 'simulation_locker_robot.launch.py')
-        ),
-        launch_arguments={
-            'use_multi_robots': 'True',
-            'x': str(3.6),
-            'y': str(1.6),
-            'yaw': str(3.14),
-            'namespace_robot': "robot1"
-        }.items(),
+    ld.add_action(TimerAction(
+        period=4.0,
+        actions=[IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(
+                os.path.join(get_package_share_directory('neo_simulation2'), 'launch', 'simulation_locker_robot.launch.py')
+            ),
+            launch_arguments={
+                'use_multi_robots': 'True',
+                'x': str(3.6),
+                'y': str(1.6),
+                'yaw': str(3.14),
+                'namespace_robot': "robot1"
+            }.items(),
+        )]
     ))
 
-    ld.add_action(IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(get_package_share_directory('neo_simulation2'), 'launch', 'simulation_frame_robot.launch.py')
-        ),
-        launch_arguments={
-            'use_multi_robots': 'True',
-            'x': str(3.5),
-            'y': str(3.2),
-            'yaw': str(0),
-            'namespace_robot': "robot2"
-        }.items(),
+    ld.add_action(TimerAction(
+        period=5.0,
+        actions=[IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(
+                os.path.join(get_package_share_directory('neo_simulation2'), 'launch', 'simulation_frame_robot.launch.py')
+            ),
+            launch_arguments={
+                'use_multi_robots': 'True',
+                'x': str(3.5),
+                'y': str(3.2),
+                'yaw': str(3.14),
+                'namespace_robot': "robot2"
+            }.items(),
+        )]
     ))
 
     return ld

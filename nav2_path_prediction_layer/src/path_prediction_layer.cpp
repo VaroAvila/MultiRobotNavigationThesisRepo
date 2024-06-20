@@ -63,22 +63,22 @@ void PathPredictionLayer::cmd_vel_callback(const geometry_msgs::msg::Twist::Shar
     while(true){
     if(linear_speed < 0.1)
       {
-      path_length = 50;
+      path_length = 25;
       break;
       }
     else if(linear_speed < 0.2)
       {
-      path_length = 100;
+      path_length = 50;
       break;
       }
     else if(linear_speed < 0.3)
       {
-      path_length = 200;
+      path_length = 100;
       break;
       }
     else
       {
-      path_length = 250;
+      path_length = 150;
       break;
       }
     }
