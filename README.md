@@ -25,22 +25,26 @@ Once you have the requirements installed, open your CLI and run the next set of 
 
 ```
 cd
-mkdir -p ~/ros2_humble_wss/thesis_wsp && cd ~/ros2_humble_wss/thesis_wsp
+mkdir -p ~/ros2_humble_wss/thesis_wsp/src && cd ~/ros2_humble_wss/thesis_wsp/src
 git clone https://github.com/VaroAvila/MultiRobotNavigationThesisRepo.git
 ```
 <br>
 After cloning the repository, it needs to be built by running:
 
 ```
+cd ~/ros2_humble_wss/thesis_wsp
 colcon build
 ```
 <br>
-Once colcon finishes building, you need to update your bashrc file to run the ros_settings.sh file everytime a CLI instance is open - it sources the ROS2 workspace and runs some other lines to export simulation parameters. 
+Once colcon finishes building, you need to update your bashrc file to run the ros_settings.sh file everytime a CLI instance is opened - it sources the ROS2 workspace and runs some other lines to export simulation parameters. 
+<br>
 
 ```
 echo "source ~/ros2_humble_wss/thesis_wsp/src/ros_settings.sh" >> ~/.bashrc && tail ~/.bashrc && source ~/.bashrc
 ```
+
 After this step is completed, close the console and you can start running simulations.
+<br>
 
 ## Use
 <br>
