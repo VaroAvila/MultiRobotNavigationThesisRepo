@@ -9,7 +9,7 @@ In this repository you can find:
 1. All the needed packages to run multi-robot simulations with the Neobotix Stack 
 2. A modified plugin to command and control robots (the goals need to be inputted on the plugin's code or implement a .yaml solution to handle goals).
 3. A footprint costmap layer to share robot footprints with the other robots
-4. A path prediction layer to share the expected path of each robot with the other robots
+4. A path prediction costmap layer to share the expected path of each robot with the other robots
 5. Multiple simulation scenarios, robot models and navigation configurations
 <br>
 ## Requirements
